@@ -11,7 +11,7 @@ def passcard_info_view(request, passcode):
     passcard = Passcard.objects.all()[0]
     user = get_object_or_404(Passcard, passcode=passcode)
     visits = Visit.objects.filter(passcard=user)
-    # Программируем здесь
+
     for visit in visits:
         this_passcard_visits.append(
                 {
